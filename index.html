@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch-A-Sketch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <main>
+            <header>
+                <h1>
+                    Etch-A-Sketch
+                </h1>
+            </header>
+            <section>
+                <div class="tools-container">
+                    <button class="draw-button">
+                        <a>
+                            Draw
+                        </a>
+                    </button>
+                    <button class="erase-button">
+                        <a>
+                            Erase
+                        </a>
+                    </button>
+                    <input type="color" id="color-select" colorFormat="rgb">
+
+                    <div class="grid-size-container">
+                        <label for="bar">Grid size:</label>
+                        <input type="range" id="bar" name="bar" min="16" max="64" value="16">
+                        <p><span id="valor">16x16</span></p>
+                    </div>
+                </div>
+                <div class="grid-container"></div>
+            </section>
+            <footer>
+                Copyright © 2023 Lucas Carovano
+            </footer>
+        </main>
+
+        <script src="script.js"></script>
+    </body>
+</html>

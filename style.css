@@ -1,0 +1,112 @@
+@font-face {
+    font-family: 'DeliciousHandrawn';
+    src: url('fonts/DeliciousHandrawn-Regular.ttf') format('truetype');
+  }
+
+* {
+    margin: 0px;
+    font-family: 'DeliciousHandrawn';
+    color: rgb(64, 77, 56);
+}
+
+body {
+    width: 100%;
+    background: rgb(213, 216, 181);
+}
+
+main {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+section {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.tools-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 7px;
+}
+
+.tools-container button, #color-select {
+    width: 40px;
+    height: 25px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.active {
+    background: rgb(162, 91, 91);
+}
+
+.grid-size-container {
+    width: 200px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.grid-size-container p {
+    width: 40px;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-apperance: none;
+    appearance: none;
+
+    width: 80px;
+    height: 16px;
+    background: rgb(204, 156, 117);
+    border: 1px solid rgb(64, 77, 56);
+    border-radius: 20px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 18px;
+    height: 18px;
+    background: rgb(64, 77, 56);
+    border-radius: 50%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    transition: background-color 0.2s ease;
+  }
+
+input[type="range"]::-webkit-slider-thumb:active {
+    background: rgb(162, 91, 91);
+}
+
+.grid-size-container {
+    margin-left: 20px;
+}
+
+.grid-container {
+    width: 100vh;
+    height: 100vh;
+    max-width: 350px;
+    max-height: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    user-select: none;
+    border: 1px solid rgb(64, 77, 56);
+    overflow: hidden;
+}
