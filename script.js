@@ -30,18 +30,7 @@ document.addEventListener('DOMContentLoaded', function() {
         getGrid();
     });
 
-    barDisplay.addEventListener('touchend', function() {
-        getGrid();
-    });
-
     document.addEventListener('mousedown', function(event) {
-
-        if (gridContainer.contains(event.target)) {
-            isDrawing = true;
-        }
-    });
-
-    document.addEventListener('touchstart', function(event) {
 
         if (gridContainer.contains(event.target)) {
             isDrawing = true;
@@ -51,11 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('mouseup', function() {
         isDrawing = false;
     });
-
-    document.addEventListener('touchend', function() {
-        isDrawing = false;
-    });
-
 
     function getGridValue() {
         valueDisplay.textContent = barDisplay.value + "x" + barDisplay.value;
@@ -76,30 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     drawUnit(event);
             });      
             
-            newDiv.addEventListener('touchstart', function(event) {
-                drawUnit(event);
-            }); 
-            
             newDiv.addEventListener('mouseover', function(event) {
                 if (isDrawing) {
                     drawUnit(event);
                 }
-            });
-
-            newDiv.addEventListener('touchmove', function(event) {
-                if (isDrawing) {
-                    drawUnit(event);
-                }
-            });
-
-            newDiv.addEventListener('touchstart', function(event) {
-                console.log('Touchstart event detected.');
-                // Otro código si es necesario...
-            });
-            
-            newDiv.addEventListener('touchend', function(event) {
-                console.log('Touchend event detected.');
-                // Otro código si es necesario...
             });
         
             gridContainer.appendChild(newDiv);
@@ -116,8 +80,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-
-
     buttons.forEach(function(button) {
         button.addEventListener('click', function() {
             activeButton(this);
