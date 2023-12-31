@@ -91,6 +91,16 @@ document.addEventListener('DOMContentLoaded', function() {
                     drawUnit(event);
                 }
             });
+
+            newDiv.addEventListener('touchstart', function(event) {
+                console.log('Touchstart event detected.');
+                // Otro código si es necesario...
+            });
+            
+            newDiv.addEventListener('touchend', function(event) {
+                console.log('Touchend event detected.');
+                // Otro código si es necesario...
+            });
         
             gridContainer.appendChild(newDiv);
 
@@ -98,10 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function drawUnit(event) {
-        console.log('drawUnit triggered. SelectorTool:', selectorTool, 'ColorPick:', colorPick);
-    
         if (selectorTool == 1) {
-            console.log('Drawing with color:', colorPick);
             event.target.style.backgroundColor = colorPick;
         } else if (selectorTool == 2) {
             console.log('Erasing');
